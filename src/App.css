@@ -4,13 +4,30 @@
 }
 .parentclass{
     text-align:  center;
-   
+}
+.heading{
+    text-align: center ;
+   position: fixed;
+   top: 0;
+    width: 100%;
+    min-height: 50px;
+    background: rgb(216, 216, 211);
+    
+ 
 
 }
+header h1{
+    color: rgb(31, 44, 153);
+    font-weight: 900;
+    text-decoration: none;
+}
 .aryad{
+    
     background: #edf581;
     padding: 10px;
+  
     margin: 10px;
+    margin-top: 80px;
     box-shadow: 1px 1px 8px 1px #c48f4b;
 }
 .aryad-in{
@@ -75,4 +92,7 @@ footer{
     background: rgb(90, 88, 88);
     color: #fff;
     padding: 10px;
+}
+footer p {
+    font-size: smaller;
 }
