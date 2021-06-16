@@ -1,6 +1,7 @@
   import React, { useEffect, useState } from 'react'
   import axios from 'axios'
   import './App.css'
+  import dateFormat from 'dateformat'
 
   function App() {
 
@@ -11,14 +12,16 @@
     const [alappuzhaghc,setAlappuzhaghc] = useState([])
 
     useEffect(() => {
-      const today = Date.now();
+     var today = new Date()
       console.log('date====================================');
-
+      console.log(dateFormat(today,"dd/mm/yyyy"));
+    const  formatedDate=dateFormat(today,"dd/mm/yyyy")
+      console.log(formatedDate);
 
     
       //const dateis = '16-06-2021'
       //16-06-2021
-      axios.get('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=301&date=16-06-2021').then((response) => {
+      axios.get(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=301&date=${formatedDate}`).then((response) => {
         console.log(response.data.centers)
 
 
