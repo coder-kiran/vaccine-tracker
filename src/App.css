@@ -11,14 +11,15 @@
    top: 0;
     width: 100%;
     min-height: 50px;
-    background: rgb(216, 216, 211);
+    background: #1a73e8;
+    box-shadow: 1px 1px 4px 1px #53585f ;
     
  
 
 }
 header h1{
-    color: rgb(31, 44, 153);
-    font-weight: 900;
+    color: #fff;
+    
     text-decoration: none;
 }
 .aryad{
@@ -27,7 +28,7 @@ header h1{
     padding: 10px;
   
     margin: 10px;
-    margin-top: 80px;
+    margin-top: 98px;
     box-shadow: 1px 1px 8px 1px #c48f4b;
 }
 .aryad-in{
