@@ -69,6 +69,7 @@ function App() {
   return (
 
     <div className="parentclass">
+      
       <div className="heading">
         <header>
           <h1>Sulatha Vaccine Tracker</h1>
