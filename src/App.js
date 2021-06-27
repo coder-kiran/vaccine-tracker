@@ -36,6 +36,7 @@ function App() {
           case 94936:
             setAlappuzhaghc(obj)
             break;
+          
         }
       })
     })
