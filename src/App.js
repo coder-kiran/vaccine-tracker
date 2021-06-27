@@ -81,8 +81,8 @@ function App() {
         <p>{aryad ? aryad.address : "loading.."}</p>
         {aryad.sessions ? <div className="aryad-sub">
           {
-            aryad.sessions.map(session => {
-              return (
+            aryad.sessions.map(session => 
+               (
                 <div className="aryad-in">
                   <h5>Date :- {aryad.sessions ? session.date : "loading.."}</h5>
                   <h5> Age Limit :- {session.min_age_limit}+</h5>
@@ -90,7 +90,7 @@ function App() {
                   <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
                 </div>
               )
-            })
+            )
           }
         </div> : "loading.."}
       </div>
