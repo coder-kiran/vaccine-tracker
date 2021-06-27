@@ -6,15 +6,17 @@ import dateFormat from 'dateformat'
 function App() {
 
 
-  const [mannanchery, setMannachery] = useState([])
-  const [aryad, setAryad] = useState([])
-  const [chettikad, setChettikad] = useState([])
-  const [alappuzhaghc, setAlappuzhaghc] = useState([])
-  const [vandanam, setVandanam] = useState([])
-  const [marari, setMarari] = useState([])
-  const [kalavur, setKalavur] = useState([])
-  const [punnapraNorth, setPunnapraNorth] = useState([])
-  const [punnapraSouth, setPunnapraSouth] = useState([])
+  // const [mannanchery, setMannachery] = useState([])
+  // const [aryad, setAryad] = useState([])
+  // const [chettikad, setChettikad] = useState([])
+  // const [alappuzhaghc, setAlappuzhaghc] = useState([])
+  // const [vandanam, setVandanam] = useState([])
+  // const [marari, setMarari] = useState([])
+  // const [kalavur, setKalavur] = useState([])
+  // const [punnapraNorth, setPunnapraNorth] = useState([])
+  // const [punnapraSouth, setPunnapraSouth] = useState([])
+
+  const [center,setCenter] = useState([])
 
   useEffect(() => {
     var today = new Date()
@@ -23,48 +25,61 @@ function App() {
     axios.get(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=301&date=${formatedDate}`).then((response) => {
 
       response.data.centers.map((obj, key) => {
+     
+     
+        setCenter(obj)
+        // switch (obj.center_id) {
 
-        switch (obj.center_id) {
+        //   case 94953:           //chettikad
+        //     setCenter([...obj,obj])
+        //     break;
 
-          case 94953:
-            setChettikad(obj)
-            break;
+        //   case 109306:
+        //     setCenter([...obj,obj])    //Mannachery
+        //     break;
 
-          case 109306:
-            setMannachery(obj)
-            break;
+        //   case 94941:
+        //     setCenter([...obj,obj])   //Aryad
+        //     break;
 
-          case 94941:
-            setAryad(obj)
-            break;
+        //   case 94936:
+        //     setCenter([...obj,obj]) //alappuzha ghc
+        //     break;
 
-          case 94936:
-            setAlappuzhaghc(obj)
-            break;
+        // case 94998:
+        //   setCenter([...obj,obj])  //vandanam
+        //   break;
 
-        case 94998:
-          setVandanam(obj)
-          break;
-
-        case 94972:
-          setMarari(obj)
-          break;
-        case 94962:
-          setKalavur(obj)
-          break;
-        case 96889:
-          setPunnapraNorth(obj)
-          break;
-        case 96890:
-          setPunnapraSouth(obj)
-          break;
-        }
+        // case 94972:
+        //   setCenter([...obj,obj])    //marari
+        //   break;
+        // case 94962:
+        //   setCenter([...obj,obj])  //kalavur
+        //   break;
+        // case 96889:
+        //   setCenter([...obj,obj])   //punnapra north
+        //   break;
+        // case 96890:
+        //   setCenter([...obj,obj]) //punnapra south
+        //   break;
+        // }
+        setCenter('kiran')
       })
     })
     return () => {
       console.log('cleaning up')
     }
   }, [])
+  
+    center&&center.map((centerobj,id)=>{
+          return(
+            <>
+            {console.log(centerobj)}
+             </>
+          )
+         
+})
+      
 
   return (
 
@@ -75,7 +90,9 @@ function App() {
         </header>
       </div>
 
-      <div className="aryad">
+ 
+
+      {/* <div className="aryad">
         <h1>{aryad ? aryad.name : "loading.."}</h1>
         <p>{aryad ? aryad.address : "loading.."}</p>
         {aryad.sessions ? <div className="aryad-sub">
@@ -256,7 +273,7 @@ function App() {
       })
     }
   </div> : "loading.."}
-</div>
+</div> */}
 
       <footer>
         <p>© 2021 copyright : Kiran K K</p>
