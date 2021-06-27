@@ -10,6 +10,7 @@ function App() {
   const [aryad, setAryad] = useState([])
   const [chettikad, setChettikad] = useState([])
   const [alappuzhaghc, setAlappuzhaghc] = useState([])
+  const [vandanam, setVandanam] = useState([])
 
   useEffect(() => {
     var today = new Date()
@@ -36,7 +37,9 @@ function App() {
           case 94936:
             setAlappuzhaghc(obj)
             break;
-          
+
+        case 94998:
+          setVandanam(obj)
         }
       })
     })
@@ -135,6 +138,27 @@ function App() {
           }
         </div> : "loading.."}
       </div>
+
+      <br />
+
+<div className="vandanam">
+  <h1>{vandanam ? vandanam.name : "loading.."}</h1>
+  <p>{vandanam ? vandanam.address : "loading.."}</p>
+  {vandanam.sessions ? <div className="vandanam-sub">
+    {
+      vandanam.sessions.map(session => {
+        return (
+          <div className="vandanam-in">
+            <h5>Date :- {vandanam.sessions ? session.date : "loading.."}</h5>
+            <h5> Age Limit :- {session.min_age_limit}+</h5>
+            <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
+            <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
+          </div>
+        )
+      })
+    }
+  </div> : "loading.."}
+</div>
 
       <footer>
         <p>© 2021 copyright : Kiran K K</p>
