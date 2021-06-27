@@ -11,6 +11,10 @@ function App() {
   const [chettikad, setChettikad] = useState([])
   const [alappuzhaghc, setAlappuzhaghc] = useState([])
   const [vandanam, setVandanam] = useState([])
+  const [marari, setMarari] = useState([])
+  const [kalavur, setKalavur] = useState([])
+  const [punnapraNorth, setPunnapraNorth] = useState([])
+  const [punnapraSouth, setPunnapraSouth] = useState([])
 
   useEffect(() => {
     var today = new Date()
@@ -40,6 +44,20 @@ function App() {
 
         case 94998:
           setVandanam(obj)
+          break;
+
+        case 94972:
+          setMarari(obj)
+          break;
+        case 94962:
+          setKalavur(obj)
+          break;
+        case 96889:
+          setPunnapraNorth(obj)
+          break;
+        case 96890:
+          setPunnapraSouth(obj)
+          break;
         }
       })
     })
@@ -150,6 +168,86 @@ function App() {
         return (
           <div className="vandanam-in">
             <h5>Date :- {vandanam.sessions ? session.date : "loading.."}</h5>
+            <h5> Age Limit :- {session.min_age_limit}+</h5>
+            <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
+            <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
+          </div>
+        )
+      })
+    }
+  </div> : "loading.."}
+</div>
+
+<br />
+<div className="marari">
+  <h1>{marari ? marari.name : "loading.."}</h1>
+  <p>{marari ? marari.address : "loading.."}</p>
+  {marari.sessions ? <div className="marari-sub">
+    {
+      marari.sessions.map(session => {
+        return (
+          <div className="marari-in">
+            <h5>Date :- {marari.sessions ? session.date : "loading.."}</h5>
+            <h5> Age Limit :- {session.min_age_limit}+</h5>
+            <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
+            <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
+          </div>
+        )
+      })
+    }
+  </div> : "loading.."}
+</div>
+
+<br />
+<div className="kalavur">
+  <h1>{kalavur ? kalavur.name : "loading.."}</h1>
+  <p>{kalavur ? kalavur.address : "loading.."}</p>
+  {kalavur.sessions ? <div className="kalavur-sub">
+    {
+      kalavur.sessions.map(session => {
+        return (
+          <div className="kalavur-in">
+            <h5>Date :- {kalavur.sessions ? session.date : "loading.."}</h5>
+            <h5> Age Limit :- {session.min_age_limit}+</h5>
+            <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
+            <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
+          </div>
+        )
+      })
+    }
+  </div> : "loading.."}
+</div>
+
+<br />
+<div className="punnapraNorth">
+  <h1>{punnapraNorth ? punnapraNorth.name : "loading.."}</h1>
+  <p>{punnapraNorth ? punnapraNorth.address : "loading.."}</p>
+  {punnapraNorth.sessions ? <div className="punnapraNorth-sub">
+    {
+      punnapraNorth.sessions.map(session => {
+        return (
+          <div className="punnapraNorth-in">
+            <h5>Date :- {punnapraNorth.sessions ? session.date : "loading.."}</h5>
+            <h5> Age Limit :- {session.min_age_limit}+</h5>
+            <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
+            <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
+          </div>
+        )
+      })
+    }
+  </div> : "loading.."}
+</div>
+
+<br />
+<div className="punnapraSouth">
+  <h1>{punnapraSouth ? punnapraSouth.name : "loading.."}</h1>
+  <p>{punnapraSouth ? punnapraSouth.address : "loading.."}</p>
+  {punnapraSouth.sessions ? <div className="punnapraSouth-sub">
+    {
+      punnapraSouth.sessions.map(session => {
+        return (
+          <div className="punnapraSouth-in">
+            <h5>Date :- {punnapraSouth.sessions ? session.date : "loading.."}</h5>
             <h5> Age Limit :- {session.min_age_limit}+</h5>
             <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
             <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
