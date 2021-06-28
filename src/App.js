@@ -109,6 +109,7 @@ function App() {
                 <div className="mannachery-in">
                   <h5>Date :- {mannanchery.sessions ? session.date : "Sorry, No vaccine available"}</h5>
                   <h5> Age Limit :- {session.min_age_limit}+</h5>
+                  <h5> Vaccine :- {session.vaccine}</h5>
                   <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
                   <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
                 </div>
@@ -131,6 +132,7 @@ function App() {
                 <div className="chettikad-in">
                   <h5>Date :- {chettikad.sessions ? session.date : "Sorry, No vaccine available"}</h5>
                   <h5> Age Limit :- {session.min_age_limit}+</h5>
+                  <h5> Vaccine :- {session.vaccine}</h5>
                   <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
                   <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
                 </div>
@@ -153,6 +155,7 @@ function App() {
                 <div className="alappuzhaghc-in">
                   <h5>Date :- {alappuzhaghc.sessions ? session.date : "Sorry, No vaccine available"}</h5>
                   <h5> Age Limit :- {session.min_age_limit}+</h5>
+                  <h5> Vaccine :- {session.vaccine}</h5>
                   <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
                   <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
                 </div>
@@ -175,6 +178,7 @@ function App() {
           <div className="vandanam-in">
             <h5>Date :- {vandanam.sessions ? session.date : "Sorry, No vaccine available"}</h5>
             <h5> Age Limit :- {session.min_age_limit}+</h5>
+            <h5> Vaccine :- {session.vaccine}</h5>
             <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
             <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
           </div>
@@ -196,6 +200,7 @@ function App() {
           <div className="marari-in">
             <h5>Date :- {marari.sessions ? session.date : "Sorry, No vaccine available"}</h5>
             <h5> Age Limit :- {session.min_age_limit}+</h5>
+            <h5> Vaccine :- {session.vaccine}</h5>
             <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
             <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
           </div>
@@ -203,7 +208,7 @@ function App() {
       })
     }
      <a href="https://selfregistration.cowin.gov.in/"><button class="button">Book Now</button></a>
-  </div> : "Sorry, No vaccine available"}
+  </div> : "Sorry, No vaccine available " }
 </div>
 <br />
 <div className="kalavur">
@@ -216,6 +221,7 @@ function App() {
           <div className="kalavur-in">
             <h5>Date :- {kalavur.sessions ? session.date : "Sorry, No vaccine available"}</h5>
             <h5> Age Limit :- {session.min_age_limit}+</h5>
+            <h5> Vaccine :- {session.vaccine}</h5>
             <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
             <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
           </div>
@@ -236,6 +242,7 @@ function App() {
           <div className="punnapraNorth-in">
             <h5>Date :- {punnapraNorth.sessions ? session.date : "Sorry, No vaccine available"}</h5>
             <h5> Age Limit :- {session.min_age_limit}+</h5>
+            <h5> Vaccine :- {session.vaccine}</h5>
             <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
             <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
           </div>
@@ -257,6 +264,7 @@ function App() {
           <div className="punnapraSouth-in">
             <h5>Date :- {punnapraSouth.sessions ? session.date : "Sorry, No vaccine available"}</h5>
             <h5> Age Limit :- {session.min_age_limit}+</h5>
+            <h5> Vaccine :- {session.vaccine}</h5>
             <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
             <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
           </div>
