@@ -5,276 +5,41 @@ import dateFormat from 'dateformat'
 
 function App() {
 
-
-  // const [mannanchery, setMannachery] = useState([])
-  // const [aryad, setAryad] = useState([])
-  // const [chettikad, setChettikad] = useState([])
-  // const [alappuzhaghc, setAlappuzhaghc] = useState([])
-  // const [vandanam, setVandanam] = useState([])
-  // const [marari, setMarari] = useState([])
-  // const [kalavur, setKalavur] = useState([])
-  // const [punnapraNorth, setPunnapraNorth] = useState([])
-  // const [punnapraSouth, setPunnapraSouth] = useState([])
-
   const [center,setCenter] = useState([])
-
   useEffect(() => {
+    console.log('-----------------------------NoW USEEFFECT  WILL RENDER-----------------------');
     var today = new Date()
     const formatedDate = dateFormat(today, "dd/mm/yyyy")
     //16-06-2021
     axios.get(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=301&date=${formatedDate}`).then((response) => {
-
-      response.data.centers.map((obj, key) => {
      
-     
-        setCenter(obj)
-        // switch (obj.center_id) {
-
-        //   case 94953:           //chettikad
-        //     setCenter([...obj,obj])
-        //     break;
-
-        //   case 109306:
-        //     setCenter([...obj,obj])    //Mannachery
-        //     break;
-
-        //   case 94941:
-        //     setCenter([...obj,obj])   //Aryad
-        //     break;
-
-        //   case 94936:
-        //     setCenter([...obj,obj]) //alappuzha ghc
-        //     break;
-
-        // case 94998:
-        //   setCenter([...obj,obj])  //vandanam
-        //   break;
-
-        // case 94972:
-        //   setCenter([...obj,obj])    //marari
-        //   break;
-        // case 94962:
-        //   setCenter([...obj,obj])  //kalavur
-        //   break;
-        // case 96889:
-        //   setCenter([...obj,obj])   //punnapra north
-        //   break;
-        // case 96890:
-        //   setCenter([...obj,obj]) //punnapra south
-        //   break;
-        // }
-        setCenter('kiran')
-      })
-    })
+    console.log('inside useeffect')
+      response.data.centers.map((obj, key) => {    
+        console.log('get into map')
+       console.log(obj)
+       console.log('here you can set i think')
+       setCenter(center)
+       
+      console.log('getting out from map')
+    }
+    ) 
+})
     return () => {
       console.log('cleaning up')
     }
-  }, [])
-  
-    center&&center.map((centerobj,id)=>{
-          return(
-            <>
-            {console.log(centerobj)}
-             </>
-          )
-         
-})
-      
+  },[]) 
+
 
   return (
-
+   
     <div className="parentclass">
+       {console.log('-----------------------------FIRST I WILL RENDER-----------------------')}
       <div className="heading">
         <header>
           <h1>Sulatha Vaccine Tracker</h1>
         </header>
       </div>
-
- 
-
-      {/* <div className="aryad">
-        <h1>{aryad ? aryad.name : "loading.."}</h1>
-        <p>{aryad ? aryad.address : "loading.."}</p>
-        {aryad.sessions ? <div className="aryad-sub">
-          {
-            aryad.sessions.map(session => {
-              return (
-                <div className="aryad-in">
-                  <h5>Date :- {aryad.sessions ? session.date : "loading.."}</h5>
-                  <h5> Age Limit :- {session.min_age_limit}+</h5>
-                  <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
-                  <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
-                </div>
-              )
-            })
-          }
-        </div> : "loading.."}
-      </div>
-
-      <br />
-
-      <div className="mannanchery">
-        <h1>{mannanchery ? mannanchery.name : "loading.."}</h1>
-        <p>{mannanchery ? mannanchery.address : "loading.."}</p>
-        {mannanchery.sessions ? <div className="mannanchery-sub">
-          {
-            mannanchery.sessions.map(session => {
-              return (
-                <div className="mannachery-in">
-                  <h5>Date :- {mannanchery.sessions ? session.date : "loading.."}</h5>
-                  <h5> Age Limit :- {session.min_age_limit}+</h5>
-                  <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
-                  <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
-                </div>
-              )
-            })
-          }
-        </div> : "loading.."}
-      </div>
-
-      <br />
-
-      <div className="chettikad">
-        <h1>{chettikad ? chettikad.name : "loading.."}</h1>
-        <p>{chettikad ? chettikad.address : "loading.."}</p>
-        {chettikad.sessions ? <div className="chettikad-sub">
-          {
-            chettikad.sessions.map(session => {
-              return (
-                <div className="chettikad-in">
-                  <h5>Date :- {chettikad.sessions ? session.date : "loading.."}</h5>
-                  <h5> Age Limit :- {session.min_age_limit}+</h5>
-                  <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
-                  <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
-                </div>
-              )
-            })
-          }
-        </div> : "loading.."}
-      </div>
-
-      <br />
-
-      <div className="alappuzhaghc">
-        <h1>{alappuzhaghc ? alappuzhaghc.name : "loading.."}</h1>
-        <p>{alappuzhaghc ? alappuzhaghc.address : "loading.."}</p>
-        {alappuzhaghc.sessions ? <div className="alappuzhaghc-sub">
-          {
-            alappuzhaghc.sessions.map(session => {
-              return (
-                <div className="alappuzhaghc-in">
-                  <h5>Date :- {alappuzhaghc.sessions ? session.date : "loading.."}</h5>
-                  <h5> Age Limit :- {session.min_age_limit}+</h5>
-                  <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
-                  <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
-                </div>
-              )
-            })
-          }
-        </div> : "loading.."}
-      </div>
-
-      <br />
-
-<div className="vandanam">
-  <h1>{vandanam ? vandanam.name : "loading.."}</h1>
-  <p>{vandanam ? vandanam.address : "loading.."}</p>
-  {vandanam.sessions ? <div className="vandanam-sub">
-    {
-      vandanam.sessions.map(session => {
-        return (
-          <div className="vandanam-in">
-            <h5>Date :- {vandanam.sessions ? session.date : "loading.."}</h5>
-            <h5> Age Limit :- {session.min_age_limit}+</h5>
-            <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
-            <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
-          </div>
-        )
-      })
-    }
-  </div> : "loading.."}
-</div>
-
-<br />
-<div className="marari">
-  <h1>{marari ? marari.name : "loading.."}</h1>
-  <p>{marari ? marari.address : "loading.."}</p>
-  {marari.sessions ? <div className="marari-sub">
-    {
-      marari.sessions.map(session => {
-        return (
-          <div className="marari-in">
-            <h5>Date :- {marari.sessions ? session.date : "loading.."}</h5>
-            <h5> Age Limit :- {session.min_age_limit}+</h5>
-            <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
-            <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
-          </div>
-        )
-      })
-    }
-  </div> : "loading.."}
-</div>
-
-<br />
-<div className="kalavur">
-  <h1>{kalavur ? kalavur.name : "loading.."}</h1>
-  <p>{kalavur ? kalavur.address : "loading.."}</p>
-  {kalavur.sessions ? <div className="kalavur-sub">
-    {
-      kalavur.sessions.map(session => {
-        return (
-          <div className="kalavur-in">
-            <h5>Date :- {kalavur.sessions ? session.date : "loading.."}</h5>
-            <h5> Age Limit :- {session.min_age_limit}+</h5>
-            <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
-            <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
-          </div>
-        )
-      })
-    }
-  </div> : "loading.."}
-</div>
-
-<br />
-<div className="punnapraNorth">
-  <h1>{punnapraNorth ? punnapraNorth.name : "loading.."}</h1>
-  <p>{punnapraNorth ? punnapraNorth.address : "loading.."}</p>
-  {punnapraNorth.sessions ? <div className="punnapraNorth-sub">
-    {
-      punnapraNorth.sessions.map(session => {
-        return (
-          <div className="punnapraNorth-in">
-            <h5>Date :- {punnapraNorth.sessions ? session.date : "loading.."}</h5>
-            <h5> Age Limit :- {session.min_age_limit}+</h5>
-            <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
-            <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
-          </div>
-        )
-      })
-    }
-  </div> : "loading.."}
-</div>
-
-<br />
-<div className="punnapraSouth">
-  <h1>{punnapraSouth ? punnapraSouth.name : "loading.."}</h1>
-  <p>{punnapraSouth ? punnapraSouth.address : "loading.."}</p>
-  {punnapraSouth.sessions ? <div className="punnapraSouth-sub">
-    {
-      punnapraSouth.sessions.map(session => {
-        return (
-          <div className="punnapraSouth-in">
-            <h5>Date :- {punnapraSouth.sessions ? session.date : "loading.."}</h5>
-            <h5> Age Limit :- {session.min_age_limit}+</h5>
-            <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
-            <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
-          </div>
-        )
-      })
-    }
-  </div> : "loading.."}
-</div> */}
-
+      {console.log('hihi',response.data.centers)}
       <footer>
         <p>© 2021 copyright : Kiran K K</p>
         <p>desined and developed by Kiran K K</p>
