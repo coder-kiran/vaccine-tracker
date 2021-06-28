@@ -77,14 +77,14 @@ function App() {
       </div>
 
       <div className="aryad">
-        <h1>{aryad ? aryad.name : "loading.."}</h1>
-        <p>{aryad ? aryad.address : "loading.."}</p>
+        <h1>{aryad ? aryad.name : "Sorry, No vaccine available"}</h1>
+        <p>{aryad ? aryad.address : "Sorry, No vaccine available"}</p>
         {aryad.sessions ? <div className="aryad-sub">
           {
             aryad.sessions.map(session => 
                (
                 <div className="aryad-in">
-                  <h5>Date :- {aryad.sessions ? session.date : "loading.."}</h5>
+                  <h5>Date :- {aryad.sessions ? session.date : "Sorry, No vaccine available"}</h5>
                   <h5> Age Limit :- {session.min_age_limit}+</h5>
                   <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
                   <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
@@ -92,20 +92,20 @@ function App() {
               )
             )
           }
-        </div> : "loading.."}
+        </div> : "Sorry, No vaccine available"}
       </div>
 
       <br />
 
       <div className="mannanchery">
-        <h1>{mannanchery ? mannanchery.name : "loading.."}</h1>
-        <p>{mannanchery ? mannanchery.address : "loading.."}</p>
+        <h1>{mannanchery ? mannanchery.name : "Sorry, No vaccine available"}</h1>
+        <p>{mannanchery ? mannanchery.address : "Sorry, No vaccine available"}</p>
         {mannanchery.sessions ? <div className="mannanchery-sub">
           {
             mannanchery.sessions.map(session => {
               return (
                 <div className="mannachery-in">
-                  <h5>Date :- {mannanchery.sessions ? session.date : "loading.."}</h5>
+                  <h5>Date :- {mannanchery.sessions ? session.date : "Sorry, No vaccine available"}</h5>
                   <h5> Age Limit :- {session.min_age_limit}+</h5>
                   <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
                   <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
@@ -113,20 +113,20 @@ function App() {
               )
             })
           }
-        </div> : "loading.."}
+        </div> : "Sorry, No vaccine available"}
       </div>
 
       <br />
 
       <div className="chettikad">
-        <h1>{chettikad ? chettikad.name : "loading.."}</h1>
-        <p>{chettikad ? chettikad.address : "loading.."}</p>
+        <h1>{chettikad ? chettikad.name : "Sorry, No vaccine available"}</h1>
+        <p>{chettikad ? chettikad.address : "Sorry, No vaccine available"}</p>
         {chettikad.sessions ? <div className="chettikad-sub">
           {
             chettikad.sessions.map(session => {
               return (
                 <div className="chettikad-in">
-                  <h5>Date :- {chettikad.sessions ? session.date : "loading.."}</h5>
+                  <h5>Date :- {chettikad.sessions ? session.date : "Sorry, No vaccine available"}</h5>
                   <h5> Age Limit :- {session.min_age_limit}+</h5>
                   <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
                   <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
@@ -134,20 +134,20 @@ function App() {
               )
             })
           }
-        </div> : "loading.."}
+        </div> : "Sorry, No vaccine available"}
       </div>
 
       <br />
 
       <div className="alappuzhaghc">
-        <h1>{alappuzhaghc ? alappuzhaghc.name : "loading.."}</h1>
-        <p>{alappuzhaghc ? alappuzhaghc.address : "loading.."}</p>
+        <h1>{alappuzhaghc ? alappuzhaghc.name : "Sorry, No vaccine available"}</h1>
+        <p>{alappuzhaghc ? alappuzhaghc.address : "Sorry, No vaccine available"}</p>
         {alappuzhaghc.sessions ? <div className="alappuzhaghc-sub">
           {
             alappuzhaghc.sessions.map(session => {
               return (
                 <div className="alappuzhaghc-in">
-                  <h5>Date :- {alappuzhaghc.sessions ? session.date : "loading.."}</h5>
+                  <h5>Date :- {alappuzhaghc.sessions ? session.date : "Sorry, No vaccine available"}</h5>
                   <h5> Age Limit :- {session.min_age_limit}+</h5>
                   <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
                   <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
@@ -155,20 +155,20 @@ function App() {
               )
             })
           }
-        </div> : "loading.."}
+        </div> : "Sorry, No vaccine available"}
       </div>
 
       <br />
 
 <div className="vandanam">
-  <h1>{vandanam ? vandanam.name : "loading.."}</h1>
-  <p>{vandanam ? vandanam.address : "loading.."}</p>
+  <h1>{vandanam ? vandanam.name : "Sorry, No vaccine available"}</h1>
+  <p>{vandanam ? vandanam.address : "Sorry, No vaccine available"}</p>
   {vandanam.sessions ? <div className="vandanam-sub">
     {
       vandanam.sessions.map(session => {
         return (
           <div className="vandanam-in">
-            <h5>Date :- {vandanam.sessions ? session.date : "loading.."}</h5>
+            <h5>Date :- {vandanam.sessions ? session.date : "Sorry, No vaccine available"}</h5>
             <h5> Age Limit :- {session.min_age_limit}+</h5>
             <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
             <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
@@ -176,19 +176,19 @@ function App() {
         )
       })
     }
-  </div> : "loading.."}
+  </div> : "Sorry, No vaccine available"}
 </div>
 
 <br />
 <div className="marari">
-  <h1>{marari ? marari.name : "loading.."}</h1>
-  <p>{marari ? marari.address : "loading.."}</p>
+  <h1>{marari ? marari.name : "Sorry, No vaccine available"}</h1>
+  <p>{marari ? marari.address : "Sorry, No vaccine available"}</p>
   {marari.sessions ? <div className="marari-sub">
     {
       marari.sessions.map(session => {
         return (
           <div className="marari-in">
-            <h5>Date :- {marari.sessions ? session.date : "loading.."}</h5>
+            <h5>Date :- {marari.sessions ? session.date : "Sorry, No vaccine available"}</h5>
             <h5> Age Limit :- {session.min_age_limit}+</h5>
             <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
             <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
@@ -196,19 +196,18 @@ function App() {
         )
       })
     }
-  </div> : "loading.."}
+  </div> : "Sorry, No vaccine available"}
 </div>
-
 <br />
 <div className="kalavur">
-  <h1>{kalavur ? kalavur.name : "loading.."}</h1>
-  <p>{kalavur ? kalavur.address : "loading.."}</p>
+  <h1>{kalavur ? kalavur.name : "Sorry, No vaccine available"}</h1>
+  <p>{kalavur ? kalavur.address : "Sorry, No vaccine available"}</p>
   {kalavur.sessions ? <div className="kalavur-sub">
     {
       kalavur.sessions.map(session => {
         return (
           <div className="kalavur-in">
-            <h5>Date :- {kalavur.sessions ? session.date : "loading.."}</h5>
+            <h5>Date :- {kalavur.sessions ? session.date : "Sorry, No vaccine available"}</h5>
             <h5> Age Limit :- {session.min_age_limit}+</h5>
             <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
             <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
@@ -216,19 +215,18 @@ function App() {
         )
       })
     }
-  </div> : "loading.."}
+  </div> : "Sorry, No vaccine available"}
 </div>
-
 <br />
 <div className="punnapraNorth">
-  <h1>{punnapraNorth ? punnapraNorth.name : "loading.."}</h1>
-  <p>{punnapraNorth ? punnapraNorth.address : "loading.."}</p>
+  <h1>{punnapraNorth ? punnapraNorth.name : "Sorry, No vaccine available"}</h1>
+  <p>{punnapraNorth ? punnapraNorth.address : "Sorry, No vaccine available"}</p>
   {punnapraNorth.sessions ? <div className="punnapraNorth-sub">
     {
       punnapraNorth.sessions.map(session => {
         return (
           <div className="punnapraNorth-in">
-            <h5>Date :- {punnapraNorth.sessions ? session.date : "loading.."}</h5>
+            <h5>Date :- {punnapraNorth.sessions ? session.date : "Sorry, No vaccine available"}</h5>
             <h5> Age Limit :- {session.min_age_limit}+</h5>
             <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
             <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
@@ -236,19 +234,19 @@ function App() {
         )
       })
     }
-  </div> : "loading.."}
+  </div> : "Sorry, No vaccine available"}
 </div>
 
 <br />
 <div className="punnapraSouth">
-  <h1>{punnapraSouth ? punnapraSouth.name : "loading.."}</h1>
-  <p>{punnapraSouth ? punnapraSouth.address : "loading.."}</p>
+  <h1>{punnapraSouth ? punnapraSouth.name : "Sorry, No vaccine available"}</h1>
+  <p>{punnapraSouth ? punnapraSouth.address : "Sorry, No vaccine available"}</p>
   {punnapraSouth.sessions ? <div className="punnapraSouth-sub">
     {
       punnapraSouth.sessions.map(session => {
         return (
           <div className="punnapraSouth-in">
-            <h5>Date :- {punnapraSouth.sessions ? session.date : "loading.."}</h5>
+            <h5>Date :- {punnapraSouth.sessions ? session.date : "Sorry, No vaccine available"}</h5>
             <h5> Age Limit :- {session.min_age_limit}+</h5>
             <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
             <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
@@ -256,7 +254,7 @@ function App() {
         )
       })
     }
-  </div> : "loading.."}
+  </div> : "Sorry, No vaccine available"}
 </div>
 
       <footer>

@@ -14,6 +14,7 @@
     width: 100%;
     min-height: 50px;
     background: #1a73e8;
+    background-image: linear-gradient(39deg, #bb27e0, transparent);
     box-shadow: 1px 1px 4px 1px #53585f ;   
     padding-top: 15px;
     
@@ -28,9 +29,10 @@ header h1{
 .aryad{
     
     background: #edf581;
+    /* background-image: linear-gradient(39deg, #eeb262, transparent); */
     padding: 10px;
-  
-    margin: 10px;
+    border-radius: 5px;
+    margin: 10px 30px;
     margin-top: 98px;
     box-shadow: 1px 1px 8px 1px #c48f4b;
 }
@@ -38,69 +40,119 @@ header h1{
     background: #e9eea1;
     box-shadow: 1px 1px 8px 1px #c48f4b;
     margin: 20px;
-    border-radius: 4px;
+    border-radius: 5px;
     padding: 1px;
 }
 
 .mannanchery{
     background: #90EE90;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 30px;
     box-shadow: 1px 1px 8px 1px #63a363;
+    border-radius: 5px;
 }
 .mannachery-in{
     background:	#c7f0c7;
     margin: 20px;
-    border-radius: 4px;
+    border-radius: 5px;
     box-shadow: 1px 1px 8px 1px #63a363;
     padding: 1px;
+    
 }
 .chettikad{
     background: violet ;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 30px;
     box-shadow: 1px 1px 8px 1px rgb(177, 96, 177);
-   
+    border-radius: 5px;
 }
 
 .chettikad-in{
     background:	rgb(245, 177, 245);
     margin: 20px;
-    border-radius: 4px;
+    border-radius: 5px;
     box-shadow: 1px 1px 8px 1px rgb(177, 96, 177);
     padding: 1px;
 }
 .alappuzhaghc{
     background: rgb(83, 195, 199);
     padding: 10px;
-    margin: 10px;
+    margin: 10px 30px;
     box-shadow: 1px 1px 8px 1px rgb(70, 163, 167);
+    border-radius: 5px;
 }
 
 .alappuzhaghc-in{
     background: rgb(159, 219, 221);
     margin: 20px;
     
-    border-radius: 4px;
+    border-radius: 5px;
     box-shadow: 1px 1px 8px 1px rgb(70, 163, 167);
     padding: 1px;
 }
 .vandanam{
     background: rgb(93, 226, 88);
     padding: 10px;
-    margin: 10px;
+    margin: 10px 30px;
     box-shadow: 1px 1px 8px 1px  rgb(63, 153, 60);
+    border-radius: 5px;
 
 }
 .vandanam-in{
     background: rgb(146, 228, 143);
     margin: 20px;
     
-    border-radius: 4px;
+    border-radius: 5px;
     box-shadow: 1px 1px 8px 1px  rgb(63, 153, 60);
     padding: 1px;
 }
+.kalavur{
+    background: rgb(83, 195, 199);
+    padding: 10px;
+    margin: 10px 30px;
+    box-shadow: 1px 1px 8px 1px rgb(70, 163, 167);
+    border-radius: 5px;
 
+}
+.kalavur-in{
+    background: rgb(159, 219, 221);
+    margin: 20px;    
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px 1px rgb(70, 163, 167);
+    padding: 1px;
+}
+.punnapraNorth{
+    background: #edf581;
+    /* background-image: linear-gradient(39deg, #eeb262, transparent); */
+    padding: 10px;
+  
+    margin: 10px 30px;
+    box-shadow: 1px 1px 8px 1px #c48f4b;
+    border-radius: 5px;
+}
+.punnapraNorth-in{
+    background: #e9eea1;
+    box-shadow: 1px 1px 8px 1px #c48f4b;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 1px;
+}
+.punnapraSouth{
+    background: violet ;
+    padding: 10px;
+    margin: 10px 30px;
+    box-shadow: 1px 1px 8px 1px rgb(177, 96, 177);
+    border-radius: 5px;
+   
+}
+
+.punnapraSouth-in{
+    background:	rgb(245, 177, 245);
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px 1px rgb(177, 96, 177);
+    padding: 1px;
+}
 
 h1{
     text-decoration: underline;
