@@ -86,6 +86,7 @@ function App() {
                 <div className="aryad-in">
                   <h5>Date :- {aryad.sessions ? session.date : "Sorry, No vaccine available"}</h5>
                   <h5> Age Limit :- {session.min_age_limit}+</h5>
+                  <h5> Vaccine :- {session.vaccine}</h5>
                   <h2>Dose 1 :- {session.available_capacity_dose1}</h2>
                   <h2>Dose 2 :- {session.available_capacity_dose2}</h2>
                 </div>
