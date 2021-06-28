@@ -92,6 +92,7 @@ function App() {
               )
             )
           }
+          <a href="https://selfregistration.cowin.gov.in/"><button class="button">Book Now</button></a>
         </div> : "Sorry, No vaccine available"}
       </div>
 
@@ -113,6 +114,7 @@ function App() {
               )
             })
           }
+           <a href="https://selfregistration.cowin.gov.in/"><button class="button">Book Now</button></a>
         </div> : "Sorry, No vaccine available"}
       </div>
 
@@ -134,6 +136,7 @@ function App() {
               )
             })
           }
+           <a href="https://selfregistration.cowin.gov.in/"><button class="button">Book Now</button></a>
         </div> : "Sorry, No vaccine available"}
       </div>
 
@@ -155,6 +158,7 @@ function App() {
               )
             })
           }
+           <a href="https://selfregistration.cowin.gov.in/"><button class="button">Book Now</button></a>
         </div> : "Sorry, No vaccine available"}
       </div>
 
@@ -176,6 +180,7 @@ function App() {
         )
       })
     }
+     <a href="https://selfregistration.cowin.gov.in/"><button class="button">Book Now</button></a>
   </div> : "Sorry, No vaccine available"}
 </div>
 
@@ -196,6 +201,7 @@ function App() {
         )
       })
     }
+     <a href="https://selfregistration.cowin.gov.in/"><button class="button">Book Now</button></a>
   </div> : "Sorry, No vaccine available"}
 </div>
 <br />
@@ -215,6 +221,7 @@ function App() {
         )
       })
     }
+     <a href="https://selfregistration.cowin.gov.in/"><button class="button">Book Now</button></a>
   </div> : "Sorry, No vaccine available"}
 </div>
 <br />
@@ -234,6 +241,7 @@ function App() {
         )
       })
     }
+     <a href="https://selfregistration.cowin.gov.in/"><button class="button">Book Now</button></a>
   </div> : "Sorry, No vaccine available"}
 </div>
 
@@ -254,6 +262,7 @@ function App() {
         )
       })
     }
+     <a href="https://selfregistration.cowin.gov.in/"><button class="button">Book Now</button></a>
   </div> : "Sorry, No vaccine available"}
 </div>
 
